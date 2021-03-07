@@ -12,6 +12,11 @@ import { SuggestionFormComponent } from './suggestion-form/suggestion-form.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
+// firebase imports
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import firestoreConfig from '../../my-firestore';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +27,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(firestoreConfig),
+    AngularFirestoreModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,

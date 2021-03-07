@@ -37,6 +37,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ### npm i firebase
 ng add @angular/fire
 
+ne pas oublier les imports
+// firebase imports
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import firestoreConfig from '../../my-firestore';
+
+et dans le tableau des imports :
+`AngularFireModule.initializeApp(firestoreConfig)`
+
 <mat-form-field> is a component used to wrap several Angular Material components and apply common Text field styles such as the underline, floating label, and hint messages.
 
 

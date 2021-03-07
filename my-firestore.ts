@@ -1,10 +1,10 @@
-var config = {
-  apiKey: "AIzaSyCzaPgwU8DjjqTAnZt9NJx6PmpKlpP8uSI",
-  authDomain: "ng-where-to-eat-79f4f.firebaseapp.com",
-  projectId: "ng-where-to-eat-79f4f",
-  storageBucket: "ng-where-to-eat-79f4f.appspot.com",
-  messagingSenderId: "516989252541",
-  appId: "1:516989252541:web:4e759693bc80361a0058d4"
+var firebaseConfig = {
+  apiKey: "AIzaSyARTpOZ7T6LijxfPWKvuO4-SWSoHKtmVzQ",
+  authDomain: "where-to-eat-11dae.firebaseapp.com",
+  projectId: "where-to-eat-11dae",
+  storageBucket: "where-to-eat-11dae.appspot.com",
+  messagingSenderId: "655331191691",
+  appId: "1:655331191691:web:0915ae4bf47c1a6f625d8e"
 };
 
-export default config;
+export default firebaseConfig;

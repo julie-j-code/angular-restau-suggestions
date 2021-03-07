@@ -15,7 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 // firebase imports
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import firestoreConfig from '../../my-firestore';
+import firebaseConfig from '../../my-firestore';
+import { RestaurantService } from './services/restaurant.service';
 
 
 @NgModule({
@@ -27,14 +28,14 @@ import firestoreConfig from '../../my-firestore';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularFireModule.initializeApp(firestoreConfig),
+    AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
   ],
-  providers: [],
+  providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

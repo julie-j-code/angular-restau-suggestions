@@ -1,12 +1,12 @@
 
   <div>
-    <form action="">
+    <form [formGroup]="suggestionForm" (ngSubmit)="addRestaurant()">
       <mat-form-field appearance="fill">
         <mat-label>Restaurant</mat-label>
-        <input matInput type="text">
+        <input matInput type="text" formGroupName="name">
       </mat-form-field>
 
-      <button mat-button color="primary">Primary</button>
+      <button mat-button color="primary" type="submit">Primary</button>
     </form>
   </div>
 

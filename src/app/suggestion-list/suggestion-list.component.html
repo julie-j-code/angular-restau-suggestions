@@ -1,0 +1,9 @@
+<div *ngIf="!(restaurants$ | async); else restauList">
+  loading...
+</div>
+<!-- le # sert à déclarer une variable -->
+<ng-template #restauList>
+  <div *ngFor="let restaurant of restaurants$ | async">
+    {{restaurant.name}}
+  </div>
+</ng-template>

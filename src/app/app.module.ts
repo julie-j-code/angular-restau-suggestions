@@ -17,12 +17,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import firebaseConfig from '../../my-firestore';
 import { RestaurantService } from './services/restaurant.service';
+import { SuggestionListComponent } from './suggestion-list/suggestion-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SuggestionFormComponent
+    SuggestionFormComponent,
+    SuggestionListComponent
   ],
   imports: [
     BrowserModule,

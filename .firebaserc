@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ng-where-to-eat-79f4f": {
+      "hosting": {
+        "where-to-eat": [
+          "ng-where-to-eat-79f4f"
+        ]
+      }
+    }
+  }
+}

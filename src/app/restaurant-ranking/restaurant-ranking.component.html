@@ -1,7 +1,9 @@
 <h2>Résultats</h2>
 
 <div *ngIf="sortedRestaurants">
-  <ul *ngFor="let restaurant of sortedRestaurants">
-    <li>{{setRankLabelPluriel(restaurant)}}</li>
-  </ul>
+  <mat-selection-list [multiple]="false">
+    <mat-list-option *ngFor="let restaurant of sortedRestaurants" [value]="restaurant.id">
+      {{setRankLabelPluriel(restaurant)}}
+    </mat-list-option>
+  </mat-selection-list>
 </div>

@@ -25,8 +25,9 @@ export class SuggestionListComponent implements OnInit {
     this.restaurants$=this.restaurantsCollection.valueChanges({idField : 'id'});
   }
 
-  vote(id){
-    console.log('id', id);
+  vote(restaurant){
+    // console.log('restaurant.id', restaurant.id);
+    this.rs.voteForRestaurant(restaurant);
   }
 
 }

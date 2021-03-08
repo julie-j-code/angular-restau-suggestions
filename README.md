@@ -34,6 +34,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 `import {MatInputModule} from '@angular/material/input';`
 `import {MatButtonModule} from '@angular/material/button';`
 
+<mat-form-field> is a component used to wrap several Angular Material components and apply common Text field styles such as the underline, floating label, and hint messages.
+
 ### npm i firebase
 ng add @angular/fire
 
@@ -46,6 +48,10 @@ import firestoreConfig from '../../my-firestore';
 et dans le tableau des imports :
 `AngularFireModule.initializeApp(firestoreConfig)`
 
-<mat-form-field> is a component used to wrap several Angular Material components and apply common Text field styles such as the underline, floating label, and hint messages.
 
+## A noter :
 
+``
+// angularfire permet de rendre l'id accessible
+this.restaurants$=this.restaurantsCollection.valueChanges({idField : 'id'});
+``

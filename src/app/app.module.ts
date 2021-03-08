@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import {MatDividerModule} from '@angular/material/divider';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,6 +37,7 @@ import { SuggestionListComponent } from './suggestion-list/suggestion-list.compo
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatDividerModule
   ],
   providers: [RestaurantService],
   bootstrap: [AppComponent]

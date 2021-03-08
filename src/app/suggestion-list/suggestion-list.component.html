@@ -3,7 +3,10 @@
 </div>
 <!-- le # sert à déclarer une variable -->
 <ng-template #restauList>
-  <div *ngFor="let restaurant of restaurants$ | async">
-    {{restaurant.name}}
+  <div class="list-perso" *ngFor="let restaurant of restaurants$ | async">
+   <div>Nom : {{restaurant.name}}</div>
+   <div>Ajouté le : {{restaurant.createdAt | date: "dd/MM/yyyy à HH:mm"}}</div>
+    <div>Votes : {{restaurant.vote}}</div>
+
   </div>
 </ng-template>

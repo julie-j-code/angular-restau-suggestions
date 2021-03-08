@@ -30,14 +30,23 @@ export class RestaurantRankingComponent implements OnChanges {
         const sortResult = restaurants.sort(this.sortByScore);
         this.sortedRestaurants = sortResult;
       })
-    )
-      .subscribe();
+    ).subscribe();
   }
-  sortByScore(a, b) {
-    if (a.votes > b.votes) {
+  sortByScore(a: any, b: any) {
+    if (a.vote > b.vote) {
       return -1;
-    } else { return 1 }
+    } else if (a.vote < b.vote) {
+      return 1;
+    }
     return 0;
   }
+
+  setRankLabelPluriel(restaurant) {
+    const label = restaurant.vote <= 1
+      ? `${restaurant.vote} vote pour ${restaurant.name} `
+      : `${restaurant.vote} votes pour ${restaurant.name} `;
+    return label;
+  }
+
 
 }

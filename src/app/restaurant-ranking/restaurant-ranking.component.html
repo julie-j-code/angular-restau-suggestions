@@ -2,6 +2,6 @@
 
 <div *ngIf="sortedRestaurants">
   <ul *ngFor="let restaurant of sortedRestaurants">
-    <li>Nombre de votes : {{restaurant.vote}} pour {{restaurant.name}}</li>
+    <li>{{setRankLabelPluriel(restaurant)}}</li>
   </ul>
 </div>

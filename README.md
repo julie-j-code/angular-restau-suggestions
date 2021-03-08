@@ -64,5 +64,26 @@ pour ordonner la lecture des votes
 pour subordonner le style du bouton à la validité du champ de saisie
   ``
         <button mat-raised-button color="primary" type="submit" [disabled]="!suggestionForm.valid">Primary</button>    </form>
+  ``
+## difficulté perso
 
-   ``
+  ngOnChanges(changes): void {
+    console.log('changes', changes);
+    if (!changes.restaurants$.currentValue) {
+      return;
+    }
+    changes.restaurants$.currentValue.pipe(
+      map((restaurants: restaurant[]) => {
+        const sortResult = restaurants.sort(this.sortByScore);
+        this.sortedRestaurants = sortResult;
+      })
+    ).subscribe();
+  }
+  sortByScore(a: any, b: any) {
+    if (a.vote > b.vote) {
+      return -1;
+    } else if (a.vote < b.vote) {
+      return 1;
+    }
+    return 0;
+  }

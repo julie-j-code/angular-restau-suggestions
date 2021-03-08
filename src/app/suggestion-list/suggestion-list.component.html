@@ -1,3 +1,5 @@
+-<!-- on fait passser au component ci-dessous l'observable dont on dispose déjà sous forme d'input -->
+<app-restaurant-ranking [restaurants$]="restaurants$"></app-restaurant-ranking>
 <div *ngIf="!(restaurants$ | async); else restauList">
   loading...
 </div>

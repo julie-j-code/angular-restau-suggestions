@@ -20,13 +20,15 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import firebaseConfig from '../../my-firestore';
 import { RestaurantService } from './services/restaurant.service';
 import { SuggestionListComponent } from './suggestion-list/suggestion-list.component';
+import { RestaurantRankingComponent } from './restaurant-ranking/restaurant-ranking.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SuggestionFormComponent,
-    SuggestionListComponent
+    SuggestionListComponent,
+    RestaurantRankingComponent
   ],
   imports: [
     BrowserModule,

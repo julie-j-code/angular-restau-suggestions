@@ -6,7 +6,7 @@
         <input matInput type="text" formControlName="name"/>
       </mat-form-field>
       <br>
-      <button mat-raised-button color="primary" type="submit">Primary</button>    </form>
+      <button mat-raised-button color="primary" type="submit" [disabled]="!suggestionForm.valid">Primary</button>    </form>
     {{message}}
   </div>
 

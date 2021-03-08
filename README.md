@@ -61,3 +61,8 @@ pour ordonner la lecture des votes
     return this.afs.collection<restaurant>('wte-restaurants', ref => ref.orderBy('vote', 'desc'));
   }
   ``
+pour subordonner le style du bouton à la validité du champ de saisie
+  ``
+        <button mat-raised-button color="primary" type="submit" [disabled]="!suggestionForm.valid">Primary</button>    </form>
+
+   ``

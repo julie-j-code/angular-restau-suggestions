@@ -55,3 +55,9 @@ et dans le tableau des imports :
 // angularfire permet de rendre l'id accessible
 this.restaurants$=this.restaurantsCollection.valueChanges({idField : 'id'});
 ``
+pour ordonner la lecture des votes
+``
+  readRestaurants() {
+    return this.afs.collection<restaurant>('wte-restaurants', ref => ref.orderBy('vote', 'desc'));
+  }
+  ``

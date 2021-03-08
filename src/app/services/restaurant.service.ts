@@ -16,19 +16,19 @@ export class RestaurantService {
 
   }
 
-  readRestaurants(){
-    return this.afs.collection<restaurant>('wte-restaurants');
+  readRestaurants() {
+    return this.afs.collection<restaurant>('wte-restaurants', ref => ref.orderBy('vote', 'desc'));
   }
 
-voteForRestaurant(restaurant){
-  // pour l'upload, on n'interragit plus avec une collection mais avec un document
-  this.afs.doc(`wte-restaurants/${restaurant.id}`).update({
-    // on récupère toutes les propriétés du restaurant
-    ...restaurant,
-    // on écrase la valeur actuelle par la valeur augmentée
-    vote:restaurant.vote+1,
+  voteForRestaurant(restaurant) {
+    // pour l'upload, on n'interragit plus avec une collection mais avec un document
+    this.afs.doc(`wte-restaurants/${restaurant.id}`).update({
+      // on récupère toutes les propriétés du restaurant
+      ...restaurant,
+      // on écrase la valeur actuelle par la valeur augmentée
+      vote: restaurant.vote + 1,
 
-  });
-}
+    });
+  }
 
 }

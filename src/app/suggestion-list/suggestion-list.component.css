@@ -1,5 +1,12 @@
 .list-perso{
-  padding: 1rem;
+  padding: 2rem 1rem;
   border-bottom: darkgrey 1px solid;
+}
 
+.list-perso div{
+  padding: 0.5rem 0;
+}
+
+.list-perso button{
+  margin-left: 5px;
 }

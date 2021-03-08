@@ -21,7 +21,12 @@ export class SuggestionListComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.restaurantsCollection=  await this.rs.readRestaurants();
-    this.restaurants$=this.restaurantsCollection.valueChanges();
+    // angularfire permet de rendre l'id accessible
+    this.restaurants$=this.restaurantsCollection.valueChanges({idField : 'id'});
+  }
+
+  vote(id){
+    console.log('id', id);
   }
 
 }

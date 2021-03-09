@@ -3,9 +3,10 @@
 <div *ngIf="sortedRestaurants">
   <!-- on va écouter un évènement particulier au lieu d'un click event : un selectionChange event
   évènement particulier mis à disposition pour écouter les évènements sur une liste mat-selection-list -->
-  <mat-selection-list [multiple]="false" (selectionChange)="onSelectionChange($event)" (click)="onpenConfigDialog(restau)">
-    <mat-list-option *ngFor="let restaurant of sortedRestaurants" [value]="restaurant.id">
+  <mat-selection-list [multiple]="false" (selectionChange)="onSelectionChange($event)" >
+    <mat-list-option *ngFor="let restaurant of sortedRestaurants" [value]="restaurant" (click)="openDialog(restaurant)">
       {{setRankLabelPluriel(restaurant)}}
     </mat-list-option>
   </mat-selection-list>
 </div>
+

@@ -6,6 +6,7 @@ import { restaurant } from '../models/restaurant';
   providedIn: 'root'
 })
 export class RestaurantService {
+  collectionName = 'wte-restaurants';
 
   constructor(private afs: AngularFirestore) { }
 
@@ -29,6 +30,10 @@ export class RestaurantService {
       vote: restaurant.vote + 1,
 
     });
+  }
+
+  deleteRestaurant(restaurant: restaurant) {
+    return this.afs.doc(`${this.collectionName}/${restaurant.id}`).delete();
   }
 
 }

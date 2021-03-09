@@ -48,5 +48,10 @@ export class RestaurantRankingComponent implements OnChanges {
     return label;
   }
 
+  onSelectionChange(event){
+    console.log(event.option.value);
+
+  }
+
 
 }

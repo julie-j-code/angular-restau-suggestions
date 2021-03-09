@@ -1,7 +1,9 @@
 <h2>Résultats</h2>
 
 <div *ngIf="sortedRestaurants">
-  <mat-selection-list [multiple]="false">
+  <!-- on va écouter un évènement particulier au lieu d'un click event : un selectionChange event
+  évènement particulier mis à disposition pour écouter les évènements sur une liste mat-selection-list -->
+  <mat-selection-list [multiple]="false" (selectionChange)="onSelectionChange($event)">
     <mat-list-option *ngFor="let restaurant of sortedRestaurants" [value]="restaurant.id">
       {{setRankLabelPluriel(restaurant)}}
     </mat-list-option>

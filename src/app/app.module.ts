@@ -5,8 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -40,9 +40,9 @@ import { RestaurantRankingComponent } from './restaurant-ranking/restaurant-rank
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    MatDividerModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule
   ],
   providers: [RestaurantService],
   bootstrap: [AppComponent]

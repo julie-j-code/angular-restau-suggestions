@@ -53,5 +53,9 @@ export class RestaurantRankingComponent implements OnChanges {
 
   }
 
+  openConfigDialog(){
+
+  }
+
 
 }

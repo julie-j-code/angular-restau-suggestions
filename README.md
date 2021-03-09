@@ -65,6 +65,22 @@ pour subordonner le style du bouton à la validité du champ de saisie
   ``
         <button mat-raised-button color="primary" type="submit" [disabled]="!suggestionForm.valid">Primary</button>    </form>
   ``
+
+pour le template de la modale
+
+``
+    <h3 mat-dialog-title>Supprimer {{ data.name }}</h3>
+    <div mat-dialog-content>
+      Etes-vous bien sûr de vouloir supprimer {{ data.name }} ?
+    </div>
+    <br />
+    <div mat-dialog-actions>
+      <button mat-button (click)="onNoClick()">Non merci</button>
+      <button mat-button (click)="delete()">Oui, supprimer</button>
+    </div>
+
+    ``
+
 ## difficulté perso
 
   ngOnChanges(changes): void {

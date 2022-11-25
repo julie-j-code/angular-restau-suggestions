@@ -1,7 +1,16 @@
 .list-perso{
-  padding: 2rem 1rem;
+  /* padding: 2rem 1rem; */
+  margin: auto;
+  padding:2vh 0;
+  width: 80vw;
   border-bottom: darkgrey 1px solid;
 }
+
+/* form mat-form-field{
+  margin: auto;
+  padding: 0;
+  width: 80vw;
+} */
 
 .list-perso div{
   padding: 0.5rem 0;
